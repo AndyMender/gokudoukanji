@@ -27,11 +27,15 @@ A simple opinion-driven kanji SRS app
 
 - Simple, easy to follow mnemonics leveraging kanji meanings, possibly relying on Japanese sounds (not English!)
 
+- Mnemonic sounds should honor Japanese vowel length and should be consistent across kanji (for instance, character stories?)
+
 - Include kanji phonetic composition where applicable!
 
 - Should be friendly to beginners as well
 
 - User-friendliness and no-fluff as top priorities
+
+- Use culturally relevant photos of Japanese stuff for recall
 
 ## Logic
 - [node.js](https://nodejs.org/en) + extra libs where needed
