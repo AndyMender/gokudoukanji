@@ -1,10 +1,8 @@
-[
-    {
-        "slug": "一人",
-        "reading": "ひとり",
-        "meanings": ["single", "alone", "1 person"],
-        "parts": ["一", "人"],
-        "jlpt_level": "N5",
-        "level": 1
-    }
-]
+{
+    "slug": "一人",
+    "reading": "ひとり",
+    "meanings": ["single", "alone", "1 person"],
+    "parts": ["一", "人"],
+    "jlpt_level": "N5",
+    "level": 1
+}
