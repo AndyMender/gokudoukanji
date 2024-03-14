@@ -67,3 +67,13 @@ context is challenging.
 ### Back-end Storage
 
 - [PostgreSQL](https://www.postgresql.org/) to store the majority of data
+
+## Deployment
+The setup is now fully Dockerized.
+```bash
+# build container (APP_PORT can be used to override the port exposed by default)
+export APP_PORT=5173
+docker build --build-arg APP_PORT=${APP_PORT} -f Dockerfile .
+# run container as daemon in the background
+docker run -p ${APP_PORT}:${APP_PORT} -d <name of previously created Docker container>
+```
