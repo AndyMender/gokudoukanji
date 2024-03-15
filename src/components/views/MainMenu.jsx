@@ -35,7 +35,7 @@ export default class MainMenu extends Component {
  
         // Switch panels
         oldPanel.className = oldPanel.className.replace('active', '').trim();
-        newPanel.className = `${newPanel.className} active`;       
+        newPanel.className += ' active';
 
         // Switch UI mode to new mode
         this.setState((state, props) => (
