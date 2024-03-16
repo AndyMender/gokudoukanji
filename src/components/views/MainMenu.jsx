@@ -75,6 +75,7 @@ export default class MainMenu extends Component {
                 <div class="panel-nav">
                     <ul class="tab tab-block">
                         <li class="tab-item active" id="kanji-panel">
+                            {/* TODO: Can 'href' point directly to the list element's ID? */}
                             <a href="#kanji" onClick={() => this.switchUIPanel('kanji')}>Kanji</a>
                         </li>
                         <li class="tab-item" id="vocabulary-panel">
