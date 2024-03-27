@@ -1,48 +1,44 @@
 # gokudoukanji (極道漢字)
-A simple opinion-driven kanji learning app.
+**A simple opinion-driven kanji learning app.**
 
 ## Design
 
-### Features
-- No levels - only kanji-based progression (the max is at least jouyou kanji).
+### Features (WIP)
+- Kanji-based progression (current planned soft cap is all jouyou kanji)
 
-- Dynamic SRS scheme, respecting real-time intervals between study sessions.
+- Dynamically scaling SRS scheme, considering real life time intervals between study sessions
 
-- A daily review cap to avoid burnout / overwhelming the learner.
+- A daily review cap to avoid burnout / overwhelming the learner
 
-- Kanji -> vocabulary progression. Even radical-like parts are effectively kanji.
+- `Kanji` is considered the basic building block, including [Kangxi radicals](https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count#Kanji_radicals_not_recognized_by_Kangxi)
 
-- Focus on more natural kanji and vocabulary acquisition - aligned with JLPT levels and vocabulary frequency.
+- Kanji to vocabulary progression. Each kanji or set thereof unlock words which reinforce readings.
 
-- Radical-like kanji sets pulled from the Kangxi list on 
-  [Wikipedia](https://en.wikipedia.org/wiki/List_of_kanji_radicals_by_stroke_count#Kanji_radicals_not_recognized_by_Kangxi)
+- Focus on more natural kanji and vocabulary acquisition - **aligned with JLPT levels and vocabulary frequency.**
 
 - Simple, easy to follow mnemonics leveraging kanji meanings, respecting Japanese sounds (for instance, vowel length) 
-  and including kanji phonetic composition where applicable.
+  and including kanji phonetic composition where applicable
 
-- Simple, clear, user-friendly interface.
+- Clear, readable, user-friendly interface
 
-### Content Design
-
-#### Radicals
-- The [Kangxi radicals](https://en.wikipedia.org/wiki/Kangxi_radical) are a good starting point, but at 3-4 strokes 
-  radicals effectively become kanji so there is little sense to teach radicals as separate components.
-
-- For radical-like kanji, teaching the reading would not be very useful long-term. Teaching the **meaning** should be sufficient.
+### Content (WIP)
 
 #### Kanji
-- **Teaching from simpler to more complex ones to ease students in.** However, JLPT levels and kanji frequency will be prioritized.
-  That way it's easier to align how the app works with other study resources.
+- The core building block of Japanese. `kun'yomi` readings are often used for single kanji words, while `on'yomi` readings in multi-kanji words (jukugo)
+
+- **Kanji are sometimes taught in increasing complexity, however it is more beneficial to align kanji progression with JLPT levels and existing learning resources**
 
 - Each kanji will be given a **series of meanings** and **1+** readings.
 
+- The [Kangxi list](https://en.wikipedia.org/wiki/Kangxi_radical) features `radicals`, however at 3-4 strokes they resemble kanji. Therefore, the app 
+  will not separate them. **Radical-like kanji without meaningful readings will not include them.**
+
 #### Vocabulary
-- Preferably **common** vocabulary, selected from data pulled from the Jisho Web API.
+- Emphasis on **common** vocabulary, selected from data pulled from the Jisho Web API
 
-- As for other items, a **series of meanings** and a **reading** will be given.
+- Each vocabulary item will feature a series of **meanings** and **readings**
 
-- Use will be examplified via **context sentences** pulled from [Tatoeba](https://tatoeba.org/en). Teaching vocabulary without 
-context is challenging.
+- Use will be examplified via **context sentences** pulled from [Tatoeba](https://tatoeba.org/en). Teaching vocabulary without context is challenging.
 
 #### Mnemonics
 - Kanji meaning mnemonics will be **derived from simpler kanji meanings**.
@@ -55,8 +51,12 @@ context is challenging.
 ## Front-end
 
 ### Front-end Design
-- Logic via [React.js](https://react.dev/)
-- [Spectre CSS](https://picturepan2.github.io/spectre/getting-started.html) for styling
+
+#### Code
+[React.js](https://react.dev/)
+
+#### Styling
+[Spectre CSS](https://picturepan2.github.io/spectre/getting-started.html), though a simpler CSS stylesheet might be preferable
 
 ## Back-end
 
@@ -65,7 +65,6 @@ context is challenging.
 - [prisma](https://www.prisma.io/) ORM to handle database requests 
 
 ### Back-end Storage
-
 - [PostgreSQL](https://www.postgresql.org/) to store the majority of data
 
 ## Deployment
